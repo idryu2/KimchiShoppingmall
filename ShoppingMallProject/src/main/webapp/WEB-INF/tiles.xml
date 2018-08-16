@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="main" template="/WEB-INF/tiles/main.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/tiles/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+
+	<!-- 로그인 페이지 -->
+	
+	<definition name="home" template="/WEB-INF/home/home.jsp">
+		<put-attribute name="home" value="" />
+	</definition>
+
+	<!-- 게시판 리스트 -->
+	<definition name="test" template="/WEB-INF/login/test.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="board/insert" template="/WEB-INF/board/insert.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="*/*" extends="main">
+		<put-attribute name="body" value="/WEB-INF/{1}/{2}.jsp"/>
+	</definition>
+</tiles-definitions>
